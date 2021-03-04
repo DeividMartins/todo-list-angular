@@ -5,23 +5,31 @@
   </strong>
 </div>
 <div class="container">
-  <center>
-    <h4>Bem vindo ao Todo List.</h4>
+  <div class="titulo-form">
+    <h4 style="display: flex; justify-content: center;">Bem vindo ao Todo List.</h4>
     <br />
-    <strong>
+    <strong style="display: flex; justify-content: center;">
       <p>O que vamos fazer hoje?</p>
     </strong>
 
-    <div class="input-group mb-3 input-afazer">
-      <input type="text" class="form-control" placeholder="Digite aqui..." aria-label="Digite aqui..."
-        aria-describedby="button-addon2">
-      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+    <div class="input-afazer">
+      <input type="text" class="form" placeholder="Digite aqui..." aria-label="Digite aqui..." [(ngModel)]="tarefa">
+      <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+        (click)="addTarefa(tarefa)">Button</button>
     </div>
-  </center>
+  </div>
 
-  <div>
+  <div class="di_lista">
     <ul>
-      <li *ngFor="let lista_afazere of lista_afazeres">{{lista_afazere}}</li>
+      <li *ngFor="let tarefa of lista_tarefa" class="lista">
+        {{tarefa}}
+        <div>
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2"><img class="img-responsive" src="assets/images/edit.svg"></button>
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+            (click)="removerTarefa(tarefa)"><img class="img-responsive" src="assets/images/delete_forever.svg"></button>
+        </div>
+      </li>
+
     </ul>
   </div>
 </div>

@@ -41,3 +41,33 @@
     width: 500px;
     padding: 30px;
   }
+
+  .titulo-form h4{
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+.input-afazer{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.input-afazer .form{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lista{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.di_lista{
+  padding-top: 20px;
+}

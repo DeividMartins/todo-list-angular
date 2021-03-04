@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo-list';
-  lista_afazeres : any = [
+  tarefa: any;
+  lista_tarefa : any = [
     'cortar cabelo',
     'bucar café',
     'comprar desodorante',
@@ -18,5 +19,13 @@ export class AppComponent {
 
   async ngOnInit(){
 
+  }
+
+  addTarefa (tarefa){
+    this.lista_tarefa.push(tarefa)
+  }
+
+  removerTarefa(tarefa){
+    this.lista_tarefa.splice(this.lista_tarefa.indexOf(tarefa), 1)
   }
 }
